@@ -1,11 +1,136 @@
+<!-- 
+    Mini-Project RevoU
+    I Nyoman Marcel Mahardika 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mini-Project RevoU</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+    <h1 class="titlepage">Kalkulator Segitiga</h1>
+    <div class="tabs">
+        <input class="input" name="tabs" type="radio" id="tab-1" checked="checked"/>
+        <label class="label" for="tab-1">Luas Segitiga</label>
+            <div class="panel">
+                <img src="https://caraharian.com/wp-content/uploads/2020/05/Pengertian-Segitiga.jpg" alt="triangle" class="triangle" width="170px">
+                <div class="text">
+                    <p>Rumus Luas Segitiga yaitu: </p>
+                    <p class="rumus">L = 1/2 x a x t</p>
+                    <p>Di mana:</p>
+                    <p>L = Luas</p>
+                    <p>a = Panjang Alas</p>
+                    <p>t = Tinggi</p>
+                </div>
+                <br><hr>
+                <div id="luas">
+                    <form id="formLuas">
+                        <table>
+                            <h3>Hitung Luas Segitiga</h3>
+                            <tr>
+                                <td><label for="base" class="label_base">Alas:</label></td>
+                                <td><input type="text" id="base" placeholder="Masukkan nilai alas"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="height" class="label_height">Tinggi:</label></td>
+                                <td><input type="text" id="height" placeholder="Masukkan nilai tinggi"></td>
+                            </tr>
+                        </table>
+                        <br>
+                        <div id="luasResult"></div>
+                        <button type="button" onclick="hitungLuas()" class="btn_luas">Hitung Luas</button>
+                        <button type="button" onclick="formReset()" class="btn_reset">Reset</button>
+                    </form> 
+                </div>  
+            </div>
+        <input class="input" name="tabs" type="radio" id="tab-2"/>
+        <label class="label" for="tab-2">Keliling Segitiga</label>
+            <div class="panel">
+                <img src="https://caraharian.com/wp-content/uploads/2020/05/Pengertian-Segitiga.jpg" alt="triangle" class="triangle" width="170px">
+                <div class="text">
+                    <p>Rumus Keliling Segitiga yaitu: </p>
+                    <p class="rumus">K = S1 + S2 + S3</p>
+                    <p>Di mana:</p>
+                    <p>K = Keliling</p>
+                    <p>S1 = Sisi A</p>
+                    <p>S2 = Sisi B</p>
+                    <p>S3 = Sisi C</p>
+                </div>
+                <br><hr>
+                <div id="luas">
+                    <form id="formKeliling">
+                        <table>
+                            <h3>Hitung Keliling Segitiga</h3>
+                            <tr>
+                                <td><label for="side1" class="label_side">Sisi 1:</label></td>
+                                <td><input type="text" id="side1" placeholder="Masukkan panjang sisi 1"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="side2" class="label_side">Sisi 2:</label></td>
+                                <td><input type="text" id="side2" placeholder="Masukkan panjang sisi 2"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="side3" class="label_side">Sisi 3:</label></td>
+                                <td><input type="text" id="side3" placeholder="Masukkan panjang sisi 3"></td>
+                            </tr>
+                        </table>
+                        <br>
+                        <div id="kelilingResult"></div>
+                        <button type="button" onclick="hitungKeliling()" class="btn_keliling">Hitung Keliling</button>
+                        <button type="button" onclick="formReset()" class="btn_reset">Reset</button>
+                    </form>
+                </div>
+            </div>
+        
+      </div>
+    <!-- <div class="calculator">
+        
+
+        <div id="menu">
+            <h3>Pilih Operasi:</h3>
+            <button onclick="showLuas()">Hitung Luas</button>
+            <button onclick="showKeliling()">Hitung Keliling</button>
+        </div>
+        
+        <div id="luas">
+            <table>
+                <tr>
+                    <td><label for="base" class="label_base">Alas</label></td>
+                    <td><input type="text" id="base" placeholder="Masukkan nilai alas"></td>
+                </tr>
+                <tr>
+                    <td><label for="height" class="label_height">Tinggi</label></td>
+                    <td><input type="text" id="height" placeholder="Masukkan nilai tinggi"></td>
+                </tr>
+            </table>
+            <br>
+            <button onclick="hitungLuas()">Hitung Luas</button>
+            <div id="luasResult"></div>
+        </div>
+        
+
+        <div id="keliling" style="display: none;">
+            <label for="side1">Sisi 1:</label>
+            <input type="text" id="side1" pattern="\d*" placeholder="Masukkan panjang sisi 1">
+
+            <label for="side2">Sisi 2:</label>
+            <input type="text" id="side2" pattern="\d*" placeholder="Masukkan panjang sisi 2">
+
+            <label for="side3">Sisi 3:</label>
+            <input type="text" id="side3" pattern="\d*" placeholder="Masukkan panjang sisi 3">
+
+            <br>
+            <button onclick="hitungKeliling()">Hitung Keliling</button>
+            <div id="kelilingResult"></div>
+        </div>
+
+        
+    </div> -->
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
